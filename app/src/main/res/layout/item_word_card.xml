@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wordCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/card_glass"
+    android:layout_margin="4dp"
+    android:padding="12dp"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/ivWordImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_menu_gallery" />
+
+    <TextView
+        android:id="@+id/tvWordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EMAK"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvWordCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Family"
+        android:textColor="#71717A"
+        android:textSize="11sp"
+        android:gravity="center"
+        android:layout_marginTop="2dp" />
+
+</LinearLayout>

@@ -1,0 +1,587 @@
+[
+  {
+    "id": 1,
+    "difficulty": "easy",
+    "question": "Ini haiwan apa?",
+    "image": "kucing.png",
+    "answer": [
+      "INI KUCING"
+    ],
+    "words_required": 2
+  },
+  {
+    "id": 2,
+    "difficulty": "easy",
+    "question": "Ini haiwan apa?",
+    "image": "anjing.png",
+    "answer": [
+      "INI ANJING"
+    ],
+    "words_required": 2
+  },
+  {
+    "id": 3,
+    "difficulty": "easy",
+    "question": "Ini haiwan apa?",
+    "image": "arnab.png",
+    "answer": [
+      "INI ARNAB"
+    ],
+    "words_required": 2
+  },
+  {
+    "id": 4,
+    "difficulty": "easy",
+    "question": "Ini haiwan apa?",
+    "image": "lembu.png",
+    "answer": [
+      "INI LEMBU"
+    ],
+    "words_required": 2
+  },
+  {
+    "id": 5,
+    "difficulty": "easy",
+    "question": "Ini makanan apa?",
+    "image": "nasi.png",
+    "answer": [
+      "INI NASI"
+    ],
+    "words_required": 2
+  },
+  {
+    "id": 6,
+    "difficulty": "easy",
+    "question": "Ini makanan apa?",
+    "image": "roti.png",
+    "answer": [
+      "INI ROTI"
+    ],
+    "words_required": 2
+  },
+  {
+    "id": 7,
+    "difficulty": "easy",
+    "question": "Ini makanan apa?",
+    "image": "telur.png",
+    "answer": [
+      "INI TELUR"
+    ],
+    "words_required": 2
+  },
+  {
+    "id": 8,
+    "difficulty": "easy",
+    "question": "Ini minuman apa?",
+    "image": "milo.png",
+    "answer": [
+      "INI MILO"
+    ],
+    "words_required": 2
+  },
+  {
+    "id": 9,
+    "difficulty": "easy",
+    "question": "Ini minuman apa?",
+    "image": "teh.png",
+    "answer": [
+      "INI TEH"
+    ],
+    "words_required": 2
+  },
+  {
+    "id": 10,
+    "difficulty": "easy",
+    "question": "Ini minuman apa?",
+    "image": "air.png",
+    "answer": [
+      "INI AIR"
+    ],
+    "words_required": 2
+  },
+  {
+    "id": 11,
+    "difficulty": "easy",
+    "question": "Ini benda apa?",
+    "image": "buku.png",
+    "answer": [
+      "INI BUKU"
+    ],
+    "words_required": 2
+  },
+  {
+    "id": 12,
+    "difficulty": "easy",
+    "question": "Ini benda apa?",
+    "image": "majalah.png",
+    "answer": [
+      "INI MAJALAH"
+    ],
+    "words_required": 2
+  },
+  {
+    "id": 13,
+    "difficulty": "easy",
+    "question": "Ini tempat apa?",
+    "image": "sekolah.png",
+    "answer": [
+      "INI SEKOLAH"
+    ],
+    "words_required": 2
+  },
+  {
+    "id": 14,
+    "difficulty": "easy",
+    "question": "Ini tempat apa?",
+    "image": "hospital.png",
+    "answer": [
+      "INI HOSPITAL"
+    ],
+    "words_required": 2
+  },
+  {
+    "id": 15,
+    "difficulty": "easy",
+    "question": "Ini tempat apa?",
+    "image": "kedai.png",
+    "answer": [
+      "INI KEDAI"
+    ],
+    "words_required": 2
+  },
+  {
+    "id": 16,
+    "difficulty": "easy",
+    "question": "Ini kenderaan apa?",
+    "image": "motosikal.png",
+    "answer": [
+      "INI MOTOSIKAL"
+    ],
+    "words_required": 2
+  },
+  {
+    "id": 17,
+    "difficulty": "easy",
+    "question": "Ini kenderaan apa?",
+    "image": "feri.png",
+    "answer": [
+      "INI FERI"
+    ],
+    "words_required": 2
+  },
+  {
+    "id": 18,
+    "difficulty": "easy",
+    "question": "Ucapkan hello!",
+    "image": "hai.png",
+    "answer": [
+      "HAI"
+    ],
+    "words_required": 1
+  },
+  {
+    "id": 19,
+    "difficulty": "easy",
+    "question": "Ucapkan terima kasih!",
+    "image": "terima_kasih.png",
+    "answer": [
+      "TERIMA KASIH"
+    ],
+    "words_required": 1
+  },
+  {
+    "id": 20,
+    "difficulty": "easy",
+    "question": "Ucapkan maaf!",
+    "image": "maaf.png",
+    "answer": [
+      "MAAF"
+    ],
+    "words_required": 1
+  },
+  {
+    "id": 21,
+    "difficulty": "normal",
+    "question": "Amir: Awak makan apa tadi?",
+    "image": "makan_nasi.png",
+    "answer": [
+      "SAYA MAKAN NASI"
+    ],
+    "words_required": 3
+  },
+  {
+    "id": 22,
+    "difficulty": "normal",
+    "question": "Amir: Awak minum apa tadi?",
+    "image": "minum_milo.png",
+    "answer": [
+      "SAYA MINUM MILO"
+    ],
+    "words_required": 3
+  },
+  {
+    "id": 23,
+    "difficulty": "normal",
+    "question": "Amir: Awak minum apa pagi tadi?",
+    "image": "minum_teh.png",
+    "answer": [
+      "SAYA MINUM TEH"
+    ],
+    "words_required": 3
+  },
+  {
+    "id": 24,
+    "difficulty": "normal",
+    "question": "Amir: Awak makan apa untuk sarapan?",
+    "image": "makan_roti.png",
+    "answer": [
+      "SAYA MAKAN ROTI"
+    ],
+    "words_required": 3
+  },
+  {
+    "id": 25,
+    "difficulty": "normal",
+    "question": "Amir: Awak pergi mana tadi?",
+    "image": "pergi_sekolah.png",
+    "answer": [
+      "SAYA PERGI SEKOLAH",
+      "SAYA PERGI KE SEKOLAH"
+    ],
+    "words_required": 3
+  },
+  {
+    "id": 26,
+    "difficulty": "normal",
+    "question": "Amir: Awak pergi mana semalam?",
+    "image": "pergi_kedai.png",
+    "answer": [
+      "SAYA PERGI KEDAI",
+      "SAYA PERGI KE KEDAI"
+    ],
+    "words_required": 3
+  },
+  {
+    "id": 27,
+    "difficulty": "normal",
+    "question": "Amir: Awak beli apa semalam?",
+    "image": "beli_buku.png",
+    "answer": [
+      "SAYA BELI BUKU"
+    ],
+    "words_required": 3
+  },
+  {
+    "id": 28,
+    "difficulty": "normal",
+    "question": "Amir: Awak ambil apa dari meja?",
+    "image": "ambil_telur.png",
+    "answer": [
+      "SAYA AMBIL TELUR"
+    ],
+    "words_required": 3
+  },
+  {
+    "id": 29,
+    "difficulty": "normal",
+    "question": "Siapa yang membaca buku itu?",
+    "image": "baca_buku.png",
+    "answer": [
+      "SAYA BACA BUKU",
+      "ABANG BACA BUKU",
+      "EMAK BACA BUKU",
+      "AYAH BACA BUKU",
+      "KAMI BACA BUKU"
+    ],
+    "words_required": 3
+  },
+  {
+    "id": 30,
+    "difficulty": "normal",
+    "question": "Siapa yang membaca majalah itu?",
+    "image": "baca_majalah.png",
+    "answer": [
+      "SAYA BACA MAJALAH",
+      "ABANG BACA MAJALAH",
+      "EMAK BACA MAJALAH",
+      "AYAH BACA MAJALAH",
+      "KAMI BACA MAJALAH"
+    ],
+    "words_required": 3
+  },
+  {
+    "id": 31,
+    "difficulty": "normal",
+    "question": "Siapa yang membeli majalah itu?",
+    "image": "beli_majalah.png",
+    "answer": [
+      "SAYA BELI MAJALAH",
+      "ABANG BELI MAJALAH",
+      "EMAK BELI MAJALAH",
+      "AYAH BELI MAJALAH",
+      "KAMI BELI MAJALAH"
+    ],
+    "words_required": 3
+  },
+  {
+    "id": 32,
+    "difficulty": "normal",
+    "question": "Siapa yang memotong roti itu?",
+    "image": "potong_roti.png",
+    "answer": [
+      "SAYA POTONG ROTI",
+      "ABANG POTONG ROTI",
+      "EMAK POTONG ROTI",
+      "AYAH POTONG ROTI",
+      "KAMI POTONG ROTI"
+    ],
+    "words_required": 3
+  },
+  {
+    "id": 33,
+    "difficulty": "normal",
+    "question": "Siapa yang tidur di rumah?",
+    "image": "tidur_rumah.png",
+    "answer": [
+      "SAYA TIDUR RUMAH",
+      "ABANG TIDUR RUMAH",
+      "EMAK TIDUR RUMAH",
+      "AYAH TIDUR RUMAH",
+      "KAMI TIDUR RUMAH"
+    ],
+    "words_required": 3
+  },
+  {
+    "id": 34,
+    "difficulty": "normal",
+    "question": "Siapa yang minum air itu?",
+    "image": "minum_air.png",
+    "answer": [
+      "SAYA MINUM AIR",
+      "ABANG MINUM AIR",
+      "EMAK MINUM AIR",
+      "AYAH MINUM AIR",
+      "KAMI MINUM AIR"
+    ],
+    "words_required": 3
+  },
+  {
+    "id": 35,
+    "difficulty": "normal",
+    "question": "Siapa yang makan telur itu?",
+    "image": "makan_telur.png",
+    "answer": [
+      "SAYA MAKAN TELUR",
+      "ABANG MAKAN TELUR",
+      "EMAK MAKAN TELUR",
+      "AYAH MAKAN TELUR",
+      "KAMI MAKAN TELUR"
+    ],
+    "words_required": 3
+  },
+  {
+    "id": 36,
+    "difficulty": "hard",
+    "question": "Amir: Awak pergi sekolah dengan siapa?",
+    "image": "pergi_sekolah_siapa.png",
+    "answer": [
+      "SAYA PERGI SEKOLAH DENGAN ABANG",
+      "SAYA PERGI KE SEKOLAH DENGAN ABANG",
+      "SAYA PERGI SEKOLAH DENGAN EMAK",
+      "SAYA PERGI KE SEKOLAH DENGAN EMAK",
+      "SAYA PERGI SEKOLAH DENGAN AYAH",
+      "SAYA PERGI KE SEKOLAH DENGAN AYAH"
+    ],
+    "words_required": 5
+  },
+  {
+    "id": 37,
+    "difficulty": "hard",
+    "question": "Amir: Awak pergi kedai dengan siapa?",
+    "image": "pergi_kedai_siapa.png",
+    "answer": [
+      "SAYA PERGI KEDAI DENGAN EMAK",
+      "SAYA PERGI KE KEDAI DENGAN EMAK",
+      "KAMI PERGI KEDAI DENGAN EMAK",
+      "KAMI PERGI KE KEDAI DENGAN EMAK"
+    ],
+    "words_required": 5
+  },
+  {
+    "id": 38,
+    "difficulty": "hard",
+    "question": "Amir: Awak pergi hospital dengan siapa?",
+    "image": "pergi_hospital_siapa.png",
+    "answer": [
+      "SAYA PERGI HOSPITAL DENGAN AYAH",
+      "SAYA PERGI KE HOSPITAL DENGAN AYAH",
+      "KAMI PERGI HOSPITAL DENGAN AYAH",
+      "KAMI PERGI KE HOSPITAL DENGAN AYAH"
+    ],
+    "words_required": 5
+  },
+  {
+    "id": 39,
+    "difficulty": "hard",
+    "question": "Amir: Awak beli apa untuk abang?",
+    "image": "beli_milo_abang.png",
+    "answer": [
+      "SAYA BELI MILO ABANG"
+    ],
+    "words_required": 4
+  },
+  {
+    "id": 40,
+    "difficulty": "hard",
+    "question": "Amir: Awak beli apa untuk emak?",
+    "image": "beli_teh_emak.png",
+    "answer": [
+      "SAYA BELI TEH EMAK"
+    ],
+    "words_required": 4
+  },
+  {
+    "id": 41,
+    "difficulty": "hard",
+    "question": "Amir: Awak beri apa kepada abang?",
+    "image": "beri_buku_abang.png",
+    "answer": [
+      "SAYA BERI BUKU KE ABANG"
+    ],
+    "words_required": 5
+  },
+  {
+    "id": 42,
+    "difficulty": "hard",
+    "question": "Amir: Awak beri apa kepada emak?",
+    "image": "beri_air_emak.png",
+    "answer": [
+      "SAYA BERI AIR KE EMAK"
+    ],
+    "words_required": 5
+  },
+  {
+    "id": 43,
+    "difficulty": "hard",
+    "question": "Siapa yang pergi kedai dan beli roti?",
+    "image": "pergi_kedai_beli_roti.png",
+    "answer": [
+      "SAYA PERGI KEDAI BELI ROTI",
+      "SAYA PERGI KE KEDAI BELI ROTI",
+      "ABANG PERGI KEDAI BELI ROTI",
+      "ABANG PERGI KE KEDAI BELI ROTI",
+      "EMAK PERGI KEDAI BELI ROTI",
+      "EMAK PERGI KE KEDAI BELI ROTI",
+      "AYAH PERGI KEDAI BELI ROTI",
+      "AYAH PERGI KE KEDAI BELI ROTI",
+      "KAMI PERGI KEDAI BELI ROTI",
+      "KAMI PERGI KE KEDAI BELI ROTI"
+    ],
+    "words_required": 5
+  },
+  {
+    "id": 44,
+    "difficulty": "hard",
+    "question": "Siapa yang pergi kedai dan beli buku?",
+    "image": "pergi_kedai_beli_buku.png",
+    "answer": [
+      "SAYA PERGI KEDAI BELI BUKU",
+      "SAYA PERGI KE KEDAI BELI BUKU",
+      "ABANG PERGI KEDAI BELI BUKU",
+      "ABANG PERGI KE KEDAI BELI BUKU",
+      "EMAK PERGI KEDAI BELI BUKU",
+      "EMAK PERGI KE KEDAI BELI BUKU",
+      "AYAH PERGI KEDAI BELI BUKU",
+      "AYAH PERGI KE KEDAI BELI BUKU",
+      "KAMI PERGI KEDAI BELI BUKU",
+      "KAMI PERGI KE KEDAI BELI BUKU"
+    ],
+    "words_required": 5
+  },
+  {
+    "id": 45,
+    "difficulty": "hard",
+    "question": "Amir: Awak makan apa dan minum apa?",
+    "image": "makan_nasi_minum_milo.png",
+    "answer": [
+      "SAYA MAKAN NASI DAN MINUM MILO",
+      "SAYA MINUM MILO DAN MAKAN NASI",
+      "SAYA MAKAN NASI MINUM MILO",
+      "SAYA MINUM MILO MAKAN NASI"
+    ],
+    "words_required": 5
+  },
+  {
+    "id": 46,
+    "difficulty": "hard",
+    "question": "Amir: Awak makan apa dan minum apa untuk sarapan?",
+    "image": "makan_roti_minum_teh.png",
+    "answer": [
+      "SAYA MAKAN ROTI DAN MINUM TEH",
+      "SAYA MINUM TEH DAN MAKAN ROTI",
+      "SAYA MAKAN ROTI MINUM TEH",
+      "SAYA MINUM TEH MAKAN ROTI"
+    ],
+    "words_required": 5
+  },
+  {
+    "id": 47,
+    "difficulty": "hard",
+    "question": "Siapa yang memberi majalah kepada ayah?",
+    "image": "beri_majalah_ayah.png",
+    "answer": [
+      "SAYA BERI MAJALAH KE AYAH",
+      "ABANG BERI MAJALAH KE AYAH",
+      "EMAK BERI MAJALAH KE AYAH",
+      "KAMI BERI MAJALAH KE AYAH"
+    ],
+    "words_required": 5
+  },
+  {
+    "id": 48,
+    "difficulty": "hard",
+    "question": "Amir: Siapa pergi pejabat dengan ayah?",
+    "image": "pergi_pejabat_ayah.png",
+    "answer": [
+      "SAYA PERGI PEJABAT DENGAN AYAH",
+      "SAYA PERGI KE PEJABAT DENGAN AYAH",
+      "EMAK PERGI PEJABAT DENGAN AYAH",
+      "EMAK PERGI KE PEJABAT DENGAN AYAH",
+      "ABANG PERGI PEJABAT DENGAN AYAH",
+      "ABANG PERGI KE PEJABAT DENGAN AYAH",
+      "KAMI PERGI PEJABAT DENGAN AYAH",
+      "KAMI PERGI KE PEJABAT DENGAN AYAH"
+    ],
+    "words_required": 5
+  },
+  {
+    "id": 49,
+    "difficulty": "hard",
+    "question": "Siapa yang pergi hospital dan beli ubat?",
+    "image": "pergi_hospital_beli.png",
+    "answer": [
+      "SAYA PERGI HOSPITAL BELI",
+      "SAYA PERGI KE HOSPITAL BELI",
+      "ABANG PERGI HOSPITAL BELI",
+      "ABANG PERGI KE HOSPITAL BELI",
+      "EMAK PERGI HOSPITAL BELI",
+      "EMAK PERGI KE HOSPITAL BELI",
+      "AYAH PERGI HOSPITAL BELI",
+      "AYAH PERGI KE HOSPITAL BELI",
+      "KAMI PERGI HOSPITAL BELI",
+      "KAMI PERGI KE HOSPITAL BELI"
+    ],
+    "words_required": 4
+  },
+  {
+    "id": 50,
+    "difficulty": "hard",
+    "question": "Amir: Awak beli apa dan beri kepada siapa?",
+    "image": "beli_roti_beri_emak.png",
+    "answer": [
+      "SAYA BELI ROTI DAN BERI KE EMAK",
+      "SAYA BELI ROTI BERI KE EMAK"
+    ],
+    "words_required": 6
+  }
+]

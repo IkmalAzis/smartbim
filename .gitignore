@@ -1,0 +1,42 @@
+# ─── Gradle ───
+.gradle/
+build/
+/build/
+**/build/
+
+# ─── Android Studio / IntelliJ ───
+.idea/
+.kotlin/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
+
+# ─── Local config (SDK path + may contain SECRETS) ───
+local.properties
+secrets.properties
+keystore.properties
+*.env
+
+# ─── Signing / keystores (NEVER commit) ───
+*.jks
+*.keystore
+
+# ─── Build outputs ───
+*.apk
+*.aab
+*.ap_
+*.dex
+output.json
+
+# ─── Logs / crash dumps ───
+*.log
+hs_err_pid*
+replay_pid*
+.navigation/
+
+# ─── Large media not meant for the repo (host on CDN / YouTube instead) ───
+# *.mp4

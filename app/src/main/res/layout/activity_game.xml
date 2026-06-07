@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootGame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/headerGame"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnBackGame"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            app:tint="#6B7280" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Game Mode"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View android:layout_width="40dp" android:layout_height="40dp" />
+
+    </LinearLayout>
+
+    <!-- START SCREEN -->
+    <LinearLayout
+        android:id="@+id/layoutGameStart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingTop="17dp"
+        android:paddingBottom="32dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/headerGame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎮"
+            android:textSize="80sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Blitz"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginTop="3dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign as many words as possible in 60 seconds!"
+            android:textColor="#71717A"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Rules card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_glass"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚡    +10 pts per correct gesture"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:layout_marginBottom="6dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔥    ×2 multiplier after 5 correct in a row"
+                android:textColor="#F59E0B"
+                android:textSize="13sp"
+                android:layout_marginBottom="6dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="❌      3 strikes = Game Over"
+                android:textColor="#EF4444"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnStartGame"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/card_glass_emerald"
+            android:text="Start Game"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- GAME SESSION SCREEN -->
+    <LinearLayout
+        android:id="@+id/layoutGameSession"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/headerGame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Score + Multiplier row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvGameScore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0 pts"
+                android:textColor="#10B981"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvMultiplier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#F59E0B"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Camera Box -->
+        <FrameLayout
+            android:id="@+id/cameraBoxGame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/camera_border_emerald"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp">
+
+            <androidx.camera.view.PreviewView
+                android:id="@+id/previewViewGame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.fyp.smartsigntranslator.HandOverlayView
+                android:id="@+id/handOverlayGame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!-- Result flash overlay -->
+            <TextView
+                android:id="@+id/tvGameResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text=""
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:padding="12dp"
+                android:background="#CC000000"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <!-- Target word card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_glass"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:gravity="center"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="subtext"
+                android:text="SIGN THIS WORD"
+                android:textColor="#71717A"
+                android:textSize="10.5sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTargetWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EMAK"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <!-- Strikes + Timer row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <!-- Strikes -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvStrike1"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:text="✕"
+                    android:textColor="#3A3A3A"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/card_glass"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/tvStrike2"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:text="✕"
+                    android:textColor="#3A3A3A"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/card_glass"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/tvStrike3"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:text="✕"
+                    android:textColor="#3A3A3A"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/card_glass" />
+
+            </LinearLayout>
+
+            <!-- Circular timer -->
+            <FrameLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:gravity="center">
+
+                <!-- Background circle -->
+                <com.fyp.smartsigntranslator.CircularTimerView
+                    android:id="@+id/circularTimer"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp" />
+
+                <TextView
+                    android:id="@+id/tvTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="60"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- GAME OVER SCREEN -->
+    <ScrollView
+        android:id="@+id/layoutGameOver"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/headerGame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tvGameOverEmoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎮"
+                android:textSize="72sp"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/tvGameOverTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Game Over!"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/tvFinalScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 pts"
+                android:textColor="#10B981"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Name input — only shown if score qualifies -->
+            <LinearLayout
+                android:id="@+id/nameSectionGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_glass"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🎉  You made it to Top 5!"
+                    android:textColor="#10B981"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter your name:"
+                    android:textColor="#71717A"
+                    android:textSize="12sp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/etPlayerName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="   Your name..."
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#52525B"
+                        android:backgroundTint="#3A3A3A"
+                        android:textSize="15sp"
+                        android:inputType="textPersonName"
+                        android:maxLength="15" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSaveScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/card_glass_emerald"
+                        android:text="Save"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Congrats section — shown after save -->
+            <LinearLayout
+                android:id="@+id/congratsSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🏆"
+                    android:textSize="90sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Congratulations!"
+                    android:textColor="#F59E0B"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You made it to the Top 5!"
+                    android:textColor="#71717A"
+                    android:textSize="13sp"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+            <!-- Leaderboard -->
+            <LinearLayout
+                android:id="@+id/leaderboardSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_glass"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 🏆  TOP 5 LEADERBOARD"
+                    android:textColor="#F59E0B"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:id="@+id/leaderboardContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSaveAndPlayAgain"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/card_glass_emerald"
+                android:text="Play Again"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGameExit"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/card_glass"
+                android:text="Exit"
+                android:textAllCaps="false"
+                android:textColor="#71717A"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

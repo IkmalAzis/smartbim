@@ -1,0 +1,19 @@
+// Top-level build file
+buildscript {
+    repositories {
+        google()            // <--- Kedai 1 (Penting!)
+        mavenCentral()      // <--- Kedai 2 (Penting!)
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0"
+    }
+}
+plugins {
+    alias(libs.plugins.kotlin.compose) apply false
+}
+
+// Kita biarkan kosong kat bawah ni sebab repositories lain dah ada kat settings.gradle
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

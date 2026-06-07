@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SmartSignLanguageTranslator" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.SmartSignLanguageTranslator" parent="Base.Theme.SmartSignLanguageTranslator" />
+
+    <!-- Splash theme with forced dark background -->
+    <style name="Theme.SmartSignLanguageTranslator.Splash" parent="Theme.SmartSignLanguageTranslator">
+        <item name="android:windowBackground">#0D0D0D</item>
+        <item name="android:statusBarColor">#0D0D0D</item>
+        <item name="android:navigationBarColor">#0D0D0D</item>
+    </style>
+</resources>

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootTranslator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <LinearLayout
+        android:id="@+id/headerTranslator"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            app:tint="#6B7280" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Translate Sign"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnSettingGear"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_settings"
+            app:tint="#A1A1AA" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/cameraBox"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/camera_border_emerald"
+        android:tag="icon_bg"
+        app:layout_constraintTop_toBottomOf="@id/headerTranslator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="1:1">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp" />
+
+        <com.fyp.smartsigntranslator.HandOverlayView
+            android:id="@+id/handOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp" />
+
+        <!-- Hover buttons top-left -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <FrameLayout
+                android:id="@+id/btnHoverGemini"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="skip_theme"
+                android:background="@android:color/transparent"
+                android:padding="4dp"
+                android:layout_marginEnd="6dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="✦"
+                    android:textColor="#10B981"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- Delete button bottom-left -->
+        <FrameLayout
+            android:id="@+id/btnHoverDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_margin="10dp"
+            android:tag="skip_theme"
+            android:background="@android:color/transparent"
+            android:padding="4dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="⤺"
+                android:textColor="#EF4444"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <!-- Camera message overlay -->
+        <TextView
+            android:id="@+id/tvCameraMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#CC000000"
+            android:padding="8dp"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/confidenceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_margin="11dp"
+            android:background="#88000000"
+            android:padding="6dp"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+
+        <ImageButton
+            android:id="@+id/btnSwitchCamera"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="10dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_rotate"
+            app:tint="#FFFFFF" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:background="@drawable/pill_dark"
+        android:tag="icon_bg"
+        app:layout_constraintTop_toBottomOf="@id/cameraBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <View
+            android:id="@+id/statusDot"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/dot_green" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status: "
+            android:textColor="#A1A1AA"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/gestureText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="READY"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutResults"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/layoutStatus"
+        app:layout_constraintBottom_toTopOf="@id/layoutFooterButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- DETECTED WORDS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/card_glass"
+            android:orientation="vertical"
+            android:padding="12dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="subtext"
+                android:text="DETECTED WORDS"
+                android:textColor="#71717A"
+                android:textSize="10.5sp"
+                android:textStyle="bold" />
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+                <TextView
+                    android:id="@+id/bufferText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <!-- WORD BUFFER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/card_glass"
+            android:orientation="vertical"
+            android:padding="12dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="subtext"
+                android:text="WORD BUFFER"
+                android:textColor="#71717A"
+                android:textSize="10.5sp"
+                android:textStyle="bold" />
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:id="@+id/wordBufferChips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical" />
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <!-- FINAL SENTENCE — horizontal scroll, static from left -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:background="@drawable/card_glass"
+            android:orientation="vertical"
+            android:padding="12dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="subtext"
+                android:text="FINAL SENTENCE"
+                android:textColor="#71717A"
+                android:textSize="10.5sp"
+                android:textStyle="bold" />
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+                <TextView
+                    android:id="@+id/sentenceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:singleLine="true" />
+            </HorizontalScrollView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutFooterButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPlaySpeech"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/btn_outline_emerald"
+            android:drawableStart="@android:drawable/ic_lock_silent_mode_off"
+            android:drawablePadding="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="Play Speech"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            app:drawableTint="#10B981" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLanguage"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_outline_emerald"
+            android:drawableStart="@drawable/ic_globe"
+            android:drawablePadding="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="Language: BM"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            app:drawableTint="#10B981" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
