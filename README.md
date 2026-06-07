@@ -8,9 +8,9 @@ doubles as a sign ↔ speech/text translator for everyday short conversations.
 > Final Year Project · Bachelor of Computer Science (Hons) Software Engineering, UNITEN
 > Muhammad Ikmal Bin Azis
 
-<!-- Demo: replace with a GIF in assets/ or a YouTube link -->
-<!-- ![SmartBIM demo](assets/demo.gif) -->
-<!-- ▶️ [Watch the 2-minute field demo](YOUR_YOUTUBE_LINK) -->
+
+![SmartBIM demo](assets/demo.gif)
+
 
 ## The Problem
 
